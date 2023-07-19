@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="images/Netflix.png">
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+<body>
+	<!-- NAVBAR -->
+    <div class="header">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <div>
+                <button class="language-btn">English <img src="images/down-icon.png"></button>
+                <button class="language-btn" onclick="document.location='index.html'">Back</button>
+            </div>
+            
+        </nav>
+        <div class="container">
+            <h1 class="label">User Login</h1>
+            <form class="login_form" action="home.html" method="post" name="form" onsubmit="return validated()">
+
+                <div class="font" for="user_name">User Name</div>
+                <input autocomplete="off" type="text" name="user_name" id="user_name" >
+
+                <div class="font font2" for="user_pass">Password</div>
+                <input type="password" name="password" id="user_pass">
+
+
+                <button type="submit" onclick="signIn()">signIn</button>
+            </form>
+        </div>	
+        
+    </div>
+</div>
+
+<script >
+
+    function getData(){
+        let user_data =   JSON.parse(localStorage.getItem("user_data"));
+        return user_data;
+    }
+    //  var data = getData();
+    //  console.log(data);
+  
+  function signIn(){
+  
+       let data = getData();
+  
+       let user_name = document.getElementById('user_name').value;
+       let user_pass = document.getElementById('user_pass').value;
+  
+       if (data.user_name == user_name && data.user_pass == user_pass) {
+        window.location.href = "index1.html";
+            alert("login success");
+           
+       } else {
+         alert("login fail");
+       }
+     }
+      </script>
+	
+</body>
+</html>

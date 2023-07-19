@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="images/Netflix.png">
+    <link rel="stylesheet" href="signin.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+<body>
+	<!-- NAVBAR -->
+    <div class="header">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <div>
+                <button class="language-btn">English <img src="images/down-icon.png"></button>
+                <button class="language-btn" onclick="document.location='index.html'">Back</button>
+            </div>
+            
+        </nav>
+        <div class="container">
+            <h1 class="label">Sign Up</h1>
+            <form class="login_form" >
+
+                <div class="font font2" for="user_name">User Name</div>
+                <input autocomplete="off" type="text"id="user_name" placeholder="User name...">
+               
+                <div class="font font2" for="user_pass">Password</div>
+                <input type="password" name="password" id="user_pass" placeholder="password..">
+                
+                <button type="submit"onclick="signUp()" href="index.html" role="button" ><a style="color:#fff" href="subscription.html">sign up</a></button>
+            </form>
+        </div>	
+        
+    </div>
+</div>
+
+<script>
+    function signUp(){
+
+    const userData = {
+        user_name: document.getElementById('user_name').value,
+        user_pass:document.getElementById('user_pass').value
+        
+    };
+    
+    localStorage.setItem("user_data", JSON.stringify(userData));
+}
+</script>                      
+
+</body>
+
+</html>

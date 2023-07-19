@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>STREAMLAb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="shortcut icon" href="image1/Netflix.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Owl Carousel css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Owl Carousel css-->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/script.js">
+  <link rel="stylesheet" href="/signin.html">
+  <link rel="stylesheet" href="/signup.html">
+  <!-- jquery css-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!-- jquery css-->
+
+</head>
+
+<body>
+  <section class="home">
+    <div class="headerbg ">
+      <header>
+        <div class="container ">
+          <div class="navbar flex1">
+            <div class="logo">
+              <img src="image1/logo.png" alt="">
+            </div>
+
+            <nav>
+              <ul id="menuitem">
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="index1.html">Movies</a></li>
+                <li><a href="index1.html">Tv Shows</a></li>
+                <li><a href="index1.html">Video</a></li>
+              </ul>
+            </nav>
+            <span class="fa fa-bars" onclick="menutoggle()"></span>
+
+            <div class="subscribe flex">
+              <i class="fas fa-search"></i>
+              <i id="palybtn" class="bi bi-house" onclick="document.location='index.html'"> </i>
+              <button>Watch Now +</button>
+            </div>
+            
+          </div>
+        </div>
+      </header>
+
+      <div class="home_content mtop">
+        <div class="container">
+          <div class="left">
+            <h1>MISSION MANGAL</h1>
+
+            <div class="time flex">
+              <label>R</label>
+              <i class="fas fa-circle"></i>
+              <span>1hrs 50mins</span>
+              <i class="fas fa-circle"></i>
+              <p>2019</p>
+              <i class="fas fa-circle"></i>
+              <button>Action</button>
+            </div>
+           <div class="row" >
+
+            <div class="text-col">
+              <video id="myVideo" width="320" height="240" controls >
+                <source class="video1" src="/video/Mission Mangal _ Official Trailer _ Akshay _ Vidya _ Sonakshi _ Taapsee _ Dir_ Jagan Shakti _ 15 Aug.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="img-col">
+              <p>A group of scientists at ISRO battle in their personal and professional lives and work tirelessly towards their only motive, the Mars Orbiter Mission.</p>
+            </div>
+           </div>
+           
+           
+            <script>
+              const myVideo = document.getElementById("myVideo");
+              myVideo.addEventListener("mouseenter", function() {
+                myVideo.play();
+              });
+              myVideo.addEventListener("mouseleave", function() {
+                myVideo.pause();
+              });
+            </script>
+
+  
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var menuitem = document.getElementById("menuitem");
+    menuitem.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menuitem.style.maxHeight == '0px') {
+        menuitem.style.maxHeight = "200px"
+      } else {
+        menuitem.style.maxHeight = "0px"
+      }
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 50);
+    })
+  </script>
+
+
+
+  <section class="popular mtop">
+    <div class="container ">
+      <div class="heading flex1">
+        <h2>Most Popular</h2>
+        <button>MORE VIDEO</button>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls  >
+                <source class="video1" src="video/Chhichhore _ Official Trailer _ Nitesh Tiwari _ Sushant _ Shraddha _ Sajid Nadiadwala _ 6th Sept.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+          
+            <div class="text">
+              <h3>Chhichhore</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/KGF 3 _ Official Concept Trailer _ Yash _ Srinidhi Shetty _ Raveena Tandon _ Prashanth Neel _Prakash.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+           
+            <div class="text">
+              <h3>  KGF 3</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/KGF Chapter 2 Trailer_Hindi_Yash_Sanjay Dutt_Raveena Tandon_Srinidhi_Prashanth Neel_Vijay Kiragandur.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>KGF 2</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/Rocket Boys 2 _ Official Trailer _ Jim Sarbh, Ishwak Singh, Arjun Radhakrishnan, Regina Cassandra.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>ROCKET BOYS</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/M.S.Dhoni - The Untold Story _ Official Subtitled Trailer _ Sushant Singh Rajput _ Neeraj Pandey.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="text">
+              <h3>M.S. Dhoni </h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/Runway 34 _ Official Trailer 2 _ Amitabh Bachchan, Ajay Devgn, Rakul Preet _ 29th April 2022.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="text">
+              <h3>RUNWAY 34</h3>
+              <div class="time flex">
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/URI _ Official Trailer _ Vicky Kaushal, Yami Gautam, Paresh Rawal _ Aditya Dhar _ 11th Jan 2019.mp4" type="video/mp4">
+              </video>
+              
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="text">
+              <h3>URI </h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="popular mtop">
+    <div class="container ">
+      <div class="heading flex1">
+        <h2>Most Viewed</h2>
+        <button>MORE VIDEO</button>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/Swatantrya Veer Savarkar Official Teaser _ Randeep Hooda _ Anand Pandit _ Legend Studios _ 2023.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>Swatantrya Veer Savarkar</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/Gandhi Godse - Ek Yudh - Official Trailer _ Rajkumar Santoshi _ In Cinemas Now.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>Gandhi Godse - Ek Yudh</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/The Kashmir Files _ Official Trailer I Anupam I Mithun I Darshan I Pallavi I Vivek I 11 March 2022.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="text">
+              <h3>The Kashmir Files</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/The Kerala Story Official Trailer _ Vipul Amrutlal Shah _ Sudipto Sen _ Adah Sharma _ Aashin A Shah.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="text">
+              <h3>The Kerala Story</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/‘Raazi’ Official Trailer _ Alia Bhatt, Vicky Kaushal _ Directed by Meghna Gulzar _ 11th May 2018.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+           
+            <div class="text">
+              <h3>Raazi </h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></scr>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <!-- Owl Carousel -->
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      responsive: {
+        411: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+
+
+
+  <section class="new_realase top">
+    <div class="container">
+      <div class="owl-carousel owl-carousel2 owl-theme">
+        <div class="items">
+          <div class="left">
+            <div class="img">
+              <img src="image1/aspirants.jpg" alt="">
+            </div>
+            <div class="heading">
+              <h2> <span></span> NEW REALEASE</h2>
+              <h1>THE Aspirants</h1>
+            </div>
+            <div class="time flex">
+              <label>R</label>
+              <i class="fas fa-circle"></i>
+              <span>1hrs 50mins</span>
+              <i class="fas fa-circle"></i>
+              <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 9.2</a>
+              <i class="fas fa-circle"></i>
+              <p>2021</p>
+              <i class="fas fa-circle"></i>
+              <button>Documentary</button>
+            </div>
+
+            <p>This Is The Real-Life Incident That brought alive the reality of thousands of UPSC aspirants in a unique, heartwarming, and naturally, hilarious way
+            </p>
+
+            
+            
+          </div>
+        </div>
+        <div class="items">
+          <div class="left">
+            <div class="img">
+              <img src="image1/Drishyam.jpg" alt="">
+            </div>
+            <div class="heading">
+              <h2> <span></span> NEW REALEASE</h2>
+              <h1>Drishyam 2</h1>
+            </div>
+            <div class="time flex">
+              <label>R</label>
+              <i class="fas fa-circle"></i>
+              <span>1hrs 50mins</span>
+              <i class="fas fa-circle"></i>
+              <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <p>2021</p>
+              <i class="fas fa-circle"></i>
+              <button>Action</button>
+            </div>
+
+            <p>A gripping tale of an investigation and a family which is threatened by it. Will Vijay Salgaonkar be able to protect his family this time?
+            </p>
+
+            
+          </div>
+        </div>
+        <div class="items">
+          <div class="left">
+            <div class="img">
+              <img src="image1/Kesari.jpg" alt="">
+            </div>
+            <div class="heading">
+              <h2> <span></span> NEW REALEASE</h2>
+              <h1>Kesari </h1>
+            </div>
+            <div class="time flex">
+              <label>R</label>
+              <i class="fas fa-circle"></i>
+              <span>1hrs 50mins</span>
+              <i class="fas fa-circle"></i>
+              <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
+              <i class="fas fa-circle"></i>
+              <p>2021</p>
+              <i class="fas fa-circle"></i>
+              <button>Action</button>
+            </div>
+
+            <p>Based on an incredible true story of the Battle of Saragarhi in which an army of 21 Sikhs fought against 10,000 Afghans in 1897
+            </p>
+
+            
+          </div>
+        </div>
+        <div class="items">
+          <div class="left">
+            <div class="img">
+              <img src="image1/Bhuj (1).jpg" alt="">
+            </div>
+            <div class="heading">
+              <h2> <span></span> NEW REALEASE</h2>
+              <h1>Bhuj: The Pride of India</h1>
+            </div>
+            <div class="time flex">
+              <label>R</label>
+              <i class="fas fa-circle"></i>
+              <span>1hrs 50mins</span>
+              <i class="fas fa-circle"></i>
+              <a class="flex"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
+              <i class="fas fa-circle"></i>
+              <p>2021</p>
+              <i class="fas fa-circle"></i>
+              <button>Action</button>
+            </div>
+
+            <p>Indo-Pakistani War of 1971
+            </p>
+
+            
+          </div>
+        </div>
+        <div class="items">
+          <div class="left">
+            <div class="img">
+              <img src="image1/Sanju.jpg" alt="">
+            </div>
+            <div class="heading">
+              <h2> <span></span> NEW REALEASE</h2>
+              <h1>Sanju</h1>
+            </div>
+            <div class="time flex">
+              <label>R</label>
+              <i class="fas fa-circle"></i>
+              <span>1hrs 50mins</span>
+              <i class="fas fa-circle"></i>
+              <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
+              <i class="fas fa-circle"></i>
+              <p>2021</p>
+              <i class="fas fa-circle"></i>
+              <button>Action</button>
+            </div>
+
+            <p>Sanjay Dutt, an actor from the Bollywood film industry, struggles with the legacy that is handed down to him by his parents, along with his personal dilemmas and vices.
+            </p>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+       
+  </section>
+
+  <script>
+    $('.owl-carousel2').owlCarousel({
+      loop: true,
+      margin: 20,
+      dots: true,
+      items: 1
+    })
+  </script>
+
+
+
+  <section class="popular mtop">
+    <div class="container ">
+      <div class="heading flex1">
+        <h2>Powerful Crime Thrillers</h2>
+        <button>MORE VIDEO</button>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/KHUDA HAAFIZ 2 - Agni Pariksha _ TRAILER _ Vidyut J, Shivaleeka O, Faruk K _ 8th July in THEATRES.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>KHUDA HAAFIZ 2</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/Trailer - Byomkesh O Pinjrapol (ব্যোমকেশ ও পিঁজরাপোল) _ Anirban Bhattacharya _ 7th April _ hoichoi.mp4" type="video/mp4">
+              </video>>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>Byomkesh O Pinjrapol</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/RRR Fan CelebRRRation Re-Release Trailer (2023).mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+           
+            <div class="text">
+              <h3>RRR</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/Super 30 _ Official Trailer _ Hrithik Roshan _ Vikas Bahl _ July 12.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            
+            <div class="text">
+              <h3>Super 30</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <video id="bestVideo" width="420" height="240" controls >
+                <source class="video1" src="/video/The Tashkent Files _ Trailer _ Mithun Chakraboty _ Streaming Now On ZEE5.mp4" type="video/mp4">
+              </video>
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="text">
+              <h3>The Tashkent Files</h3>
+              <div class="time flex">
+                <span>1hrs 50mins</span>
+                <i class="fas fa-circle"></i>
+                <a>Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- paxi mate ko lai aata hai-->
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      responsive: {
+        414: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <footer>
+    <div class="container mtop">
+      <div class="box">
+        <div class="logo">
+          <img src="image1/logo.png">
+        </div>
+        <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="icon">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-youtube-square"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Explore</h2>
+        <div class="flex">
+          <ul>
+            <li>Home</li>
+            <li>Tv Shows</li>
+            <li>Actors</li>
+            <li>Celebrity</li>
+          </ul>
+          <ul class="ul">
+            <li>Movie</li>
+            <li>Video</li>
+            <li>Basketball</li>
+            <li>Coress</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box ">
+        <h2>Company</h2>
+        <div class="flex">
+          <ul>
+            <li>Company</li>
+            <li>Terms of Use</li>
+            <li>Contact us</li>
+            <li>Our Team</li>
+          </ul>
+          <ul class="ul">
+            <li>Privacy Policy</li>
+            <li>Helps Center</li>
+            <li>Subscribe</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Download App</h2>
+        <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="img flex1">
+          <img src="image1/app1.png" alt="">
+          <img src="image1/app2.png" alt="">
+        </div>
+      </div>
+    </div>
+    <p class="legal">Copyright (c) 2021 Copyright Holder All Rights Reserved | This template is made By Netflix</p>
+  </footer>
+</body>
+
+</html>
